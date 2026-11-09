@@ -1,6 +1,6 @@
 {
   "name": "sabiai",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "description": "SABIAI — Persian AI assistant by Saheb Karami, on Cloudflare Workers AI",
   "author": "Saheb Karami (https://sahebkarami.ir)",

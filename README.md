@@ -1,116 +1,72 @@
 <div align="center">
 
-<img src="assets/logo.svg" width="96" alt="SABIAI">
+<img src="assets/logo.svg" width="96" alt="SABIAI"/>
 
-# SABIAI
+# SABIAI · سابی‌اِی‌آی
 
-### دستیار هوش مصنوعی فارسی — ساخته‌شده توسط صاحب کرمی
+**دستیار هوشمند فارسی — طراحی و توسعه توسط صاحب کرمی**
 
-**گفتگو · تحلیل تصویر · تولید تصویر · صدا به متن · ۷ مدل هوشمند**
+[🌐 sabiai.sahebkarami.ir](https://sabiai.sahebkarami.ir) · v2.0 · Cloudflare Workers AI · MIT
 
-[![Live](https://img.shields.io/badge/Live-sabiai.sahebkarami.ir-8b5cf6?style=for-the-badge)](https://sabiai.sahebkarami.ir)
-[![Cloudflare Workers](https://img.shields.io/badge/Cloudflare-Workers%20AI-f38020?style=for-the-badge&logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers-ai/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-10b981?style=for-the-badge)](LICENSE)
-
-**🌐 [sabiai.sahebkarami.ir](https://sabiai.sahebkarami.ir)**
-
-<img src="assets/screenshot-home.png" alt="SABIAI home" width="860">
+<img src="assets/screenshot-home.png" width="860" alt="SABIAI home"/>
 
 </div>
-
----
 
 ## ✨ امکانات
 
-| | قابلیت | توضیح |
+| | امکان | توضیح |
 |---|---|---|
-| 💬 | **گفتگوی استریمی** | پاسخ لحظه‌ای، حافظهٔ گفتگو، Markdown، جدول و کد با رنگ‌آمیزی |
-| 🧠 | **نمایش روند فکر کردن** | برای مدل‌های استدلالی، قابل باز و بسته شدن |
-| 🖼️ | **تحلیل تصویر** | آپلود، Paste یا Drag & Drop — اگر مدل بینایی نداشته باشد خودکار به SABI Max می‌رود |
-| 🎨 | **تولید تصویر** | دکمهٔ 🎨 یا `/draw` — توضیح فارسی خودکار به پرامپت انگلیسی حرفه‌ای تبدیل می‌شود (FLUX.2) |
-| 🎙️ | **صدا به متن** | ضبط میکروفون یا آپلود فایل صوتی (Whisper large-v3-turbo) |
-| 📎 | **پیوست فایل** | فایل‌های متنی و کد (`.py` `.js` `.json` `.md` …) |
-| 🗂️ | **تاریخچهٔ گفتگو** | ذخیره در مرورگر (IndexedDB)، جستجو، عنوان‌گذاری خودکار |
-| 🌓 | **تم تاریک و روشن** | طراحی شیشه‌ای با پس‌زمینهٔ شفق قطبی |
-| 📱 | **واکنش‌گرا + PWA** | روی موبایل مثل اپ نصب می‌شود |
-| 🪪 | **هویت SABIAI** | همهٔ مدل‌ها خودشان را SABIAI، ساختهٔ صاحب کرمی معرفی می‌کنند |
+| 🎙️ | **تماس صوتی زنده** | گفتگوی صوتی دوطرفه با تشخیص خودکار سکوت (VAD)، حالت «فشار بده و حرف بزن»، قطع کردن صحبت (barge-in)، نقش سفارشی، ذخیرهٔ متن تماس در تاریخچه. Whisper → مدل → TTS به‌صورت جمله‌به‌جمله |
+| 🏛️ | **شورای مدل‌ها** | سه مدل (Max, Code, Flash) همزمان فکر می‌کنند و SABI Pro به‌عنوان داور جمع‌بندی می‌کند؛ حالت «مناظره»: مدافع ← منتقد ← بی‌طرف ← داور |
+| 🌐 | **جستجوی وب** | پاسخ با منبع و ارجاع [1]، خواندن لینک‌های داخل پیام، ویکی‌پدیای فارسی/انگلیسی (با کلید Tavily یا Brave کل وب) |
+| 🎨 | **ساخت و ویرایش تصویر** | FLUX.2، پنج نسبت (1:1، 9:16، 3:4، 4:3، 16:9)، ویرایش هر تصویر با دستور فارسی، ترجمهٔ خودکار پرامپت |
+| 🧩 | **بوم زنده (Canvas)** | اجرای کد HTML/JS/SVG در صفحه، ویرایش دستی، «اعمال هوشمند» تغییرات با زبان طبیعی، دانلود و بازکردن در برگه جدید |
+| ⚙️ | **دستورالعمل و نقش** | نقش سفارشی برای هر گفتگو + ۸ الگوی آماده (معلم، برنامه‌نویس، مترجم، مصاحبه‌گر، …) |
+| 🧠 | **۷ مدل SABI** | Pro (استدلال با نمایش روند فکر)، Max، Flash، Code، Vision، Lite، Mini |
+| 👁️ | **بینایی** | تحلیل تا ۴ تصویر با سوئیچ خودکار به مدل بینا |
+| ✏️ | **ویرایش پیام** | ویرایش و ارسال دوبارهٔ پیام، تولید دوباره، تغییر نام گفتگو |
+| 🔊 | **خواندن با صدا** | پخش صوتی هر پاسخ |
+| ⌨️ | **دستورات /** | `/draw` `/council` `/debate` `/search` `/live` `/mic` `/model` `/system` `/clear` `/help` |
+| 📱 | **PWA** | نصب روی موبایل، تم تاریک/روشن، تاریخچهٔ محلی (IndexedDB) |
 
 <div align="center">
-<img src="assets/screenshot-chat.png" alt="SABIAI chat" width="620">
-<img src="assets/screenshot-mobile.png" alt="SABIAI mobile" width="230">
+<img src="assets/screenshot-council.png" width="640" alt="Council"/>
+<img src="assets/screenshot-live.png" width="220" alt="Live call"/>
+<br/>
+<img src="assets/screenshot-canvas.png" width="640" alt="Canvas"/>
+<img src="assets/screenshot-mobile.png" width="220" alt="Mobile"/>
 </div>
 
-## 🤖 مدل‌ها
-
-| نام در SABIAI | مدل پایه | ویژگی |
-|---|---|---|
-| 🧠 **SABI Pro** (پیش‌فرض) | GPT-OSS 120B | استدلال عمیق |
-| 🚀 **SABI Max** | Kimi K2.6 | قدرتمندترین، بینایی |
-| ⚡ **SABI Flash** | GLM 5.3 | سریع و دقیق |
-| 💻 **SABI Code** | DeepSeek V4 Pro | کدنویسی و ریاضی |
-| 👁️ **SABI Vision** | Gemma 4 26B | تحلیل تصویر |
-| 🍃 **SABI Lite** | Llama 4 Scout | فوق‌سریع، بینایی |
-| ✨ **SABI Mini** | Mistral Small 3.1 | سبک، بینایی |
-
-همهٔ مدل‌ها روی **Cloudflare Workers AI** اجرا می‌شوند — قانونی، پایدار و بدون نیاز به کلید API جداگانه.
-
-## 🚀 استقرار شخصی
+## 🚀 اجرا
 
 ```bash
-git clone https://github.com/sabi-karami/sabiai.git
-cd sabiai
-npm install
+npm i
 npx wrangler login
-npm run deploy
+npm run deploy        # روی sabiai.sahebkarami.ir منتشر می‌شود
+# اختیاری — جستجوی کل وب:
+npx wrangler secret put TAVILY_API_KEY   # یا BRAVE_API_KEY
 ```
-
-برای اجرای محلی: `npm run dev`
-
-برای دامنهٔ اختصاصی، بخش `routes` در `wrangler.toml` را ویرایش کنید.
 
 ## 🔌 API
 
-| مسیر | روش | کار |
-|---|---|---|
-| `/api/chat` | POST | گفتگوی استریمی (SSE) — `{ model, messages }` |
-| `/api/image` | POST | تولید تصویر — `{ prompt, size: square\|portrait\|landscape }` |
-| `/api/transcribe` | POST | صدا به متن — بدنهٔ خام فایل صوتی |
-| `/api/title` | POST | عنوان کوتاه برای گفتگو |
-| `/api/models` | GET | فهرست مدل‌ها |
-| `/api/health` | GET | وضعیت سرویس |
+| مسیر | کار |
+|---|---|
+| `POST /api/chat` | گفتگو (SSE) — `model`, `messages`, `search`, `system`, `voice` |
+| `POST /api/council` | شورای مدل‌ها (SSE) — `question`, `mode: parallel\|debate` |
+| `POST /api/image` | ساخت/ویرایش تصویر — `prompt`, `ratio`, `image?` |
+| `POST /api/transcribe` | صدا به متن (Whisper) — `?lang=fa\|en\|auto` |
+| `POST /api/tts` | متن به صدا (انگلیسی، Aura-2) |
+| `POST /api/title` | عنوان خودکار گفتگو |
+| `GET /api/models` · `/api/health` | فهرست مدل‌ها و وضعیت |
 
-```bash
-curl -N https://sabiai.sahebkarami.ir/api/chat \
-  -H 'Content-Type: application/json' \
-  -d '{"model":"sabi-flash","messages":[{"role":"user","content":"سلام!"}]}'
-```
-
-## 📁 ساختار
-
-```
-sabiai/
-├── src/
-│   ├── worker.js     # بک‌اند: مسیرها، مدل‌ها، هویت SABIAI
-│   └── index.html    # رابط کاربری کامل (بدون فریم‌ورک)
-├── assets/           # لوگو و اسکرین‌شات‌ها
-├── wrangler.toml
-└── package.json
-```
+> **نکتهٔ صدا:** خروجی صوتی انگلیسی با Deepgram Aura-2 است. برای فارسی از صدای فارسی مرورگر استفاده می‌شود (بهترین نتیجه در Microsoft Edge و اندروید)؛ اگر مرورگر صدای فارسی نداشته باشد، پاسخ به‌صورت متن نمایش داده می‌شود.
 
 ---
 
-## 🇬🇧 English
+## English
 
-**SABIAI** is a free, Persian-first AI assistant by **Saheb Karami**, running entirely on Cloudflare Workers + Workers AI. Streaming chat with 7 models, visible reasoning, image understanding, FLUX.2 image generation (Persian prompts auto-translated), Whisper speech-to-text, file attachments, local chat history, dark/light themes and an installable PWA — all in a single Worker with zero build step.
+**SABIAI** is a Persian-first AI assistant built by **Saheb Karami** on Cloudflare Workers AI — one Worker, zero servers.
 
-Live: **https://sabiai.sahebkarami.ir**
+**v2 features:** live two-way voice calls (VAD, push-to-talk, barge-in), a council of models (3 models + judge, parallel or debate), web search with citations, FLUX.2 image generation in 5 aspect ratios plus image editing, a live HTML/JS canvas with natural-language patching, per-chat system prompts with presets, message editing, conversation renaming, read-aloud, slash commands, 7 branded models, vision, reasoning display, PWA.
 
----
-
-<div align="center">
-
-طراحی و توسعه توسط **صاحب کرمی** · Designed & built by **Saheb Karami**
-
-⭐ اگر خوشتان آمد، ستاره بدهید!
-
-</div>
+License: MIT © Saheb Karami
