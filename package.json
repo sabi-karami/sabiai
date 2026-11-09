@@ -1,0 +1,17 @@
+{
+  "name": "sabiai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SABIAI — Persian AI assistant by Saheb Karami, on Cloudflare Workers AI",
+  "author": "Saheb Karami (https://sahebkarami.ir)",
+  "homepage": "https://sabiai.sahebkarami.ir",
+  "license": "MIT",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,21 @@
+name = "sabiai"
+main = "src/worker.js"
+compatibility_date = "2026-11-01"
+workers_dev = true
+
+# Custom domain
+routes = [
+  { pattern = "sabiai.sahebkarami.ir", custom_domain = true }
+]
+
+[ai]
+binding = "AI"
+
+[observability]
+enabled = true
+
+# index.html is imported as a text module
+[[rules]]
+type = "Text"
+globs = ["**/*.html"]
+fallthrough = true
